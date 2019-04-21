@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet"> -->
+  <!--  <link rel="stylesheet" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+    <script src="./assets/javascript/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid train-banner">
+            <div class="container text-center">
+                <h1 class="display-4">Track Those Trains</h1>
+                <p class="lead">(See what I did there?)</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="card train-section">
+              <h5 class="card-header train-card-title text-center">
+                  <strong>Current Train Schedule</strong>
+              </h5>
+              <div class="card-body">
+              <div class="table-responsive">
+              <table class="table table-hover text-center">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody id="train-table">
+
+                  <!-- Where the list of trains will go -->
+
+                </tbody>
+              </table>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <h3 class="card-header train-card-title text-center">
+                    <strong>Add Train</strong>
+                </h3>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="name">Train Name</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="destination">Destination</label>
+                      <input type="text" class="form-control" id="destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="first-train">First Train Time (HH:mm - military time)</label>
+                        <input type="time" class="form-control" id="first-train">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="number" class="form-control" id="frequency">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-purple" id="submit">Submit</button>
+                  </form>
+            </div>
+            </div>
+          </div>
+    </div>
+
+    </div>
+</body>
+</html>
