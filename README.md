@@ -1,2 +1,3 @@
 # Train-Scheduler
-Simple App Using Firebase to Store Data
+
+This is a simple app that uses Firebase to store data and Moment JS to manipulate times.
